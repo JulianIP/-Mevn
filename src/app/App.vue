@@ -9,11 +9,11 @@
                     <span class="md-title white-font height30"><img class="logo" :src="img"></span>
                 </div>
             </md-app-toolbar>
-            <md-app-drawer class="sidebar" :md-active.sync="menuVisible">
+            <md-app-drawer class="sidebar" :md-active.sync="menuVisible" md-persistent="mini">
                 <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
                 <md-list>
                     <md-list-item v-for="(item,index) in links" :key="index" @click="menuVisible = false" :to="item.path">
-                        <md-icon>send</md-icon>
+                        <md-icon>{{item.icon}}</md-icon>
                         <span class="md-list-item-text">{{item.name}}</span>
                     </md-list-item>
                 </md-list>
@@ -27,7 +27,6 @@
 
 <script>
 import logo from './assets/imgs/logo.png'
-
 export default {
     data() {
         return {
@@ -39,10 +38,12 @@ export default {
     }
 }
 </script>
-
 <style lang="scss" scoped>    
   .white-font {
       color:#ffffff!important
+  }
+  .md-app-content {
+      overflow-x:hidden;
   }
   .height30 {
       height:30px;

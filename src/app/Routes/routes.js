@@ -11,12 +11,14 @@ const routes = [
     {
       path: '/firstPage',
       component: FirstPage,
-      name: 'First Page'
+      name: 'First Page',
+      icon: 'send'
     },
     {
       path: '/secondPage',
       component: SecondPage,
-      name: 'Second Page'
+      name: 'Second Page',
+      icon: 'move_to_inbox'
     }
 ]
   

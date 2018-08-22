@@ -4,6 +4,7 @@ import VueMaterial from 'vue-material'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import 'vue-material/dist/vue-material.css'
+import 'vue-material/dist/theme/default.css'
 
 // Rutas
 import routes from './routes/routes'
@@ -14,9 +15,9 @@ const router = new VueRouter({
     linkExactActiveClass: 'nav-item active'
 })
 
-Vue.use(VueMaterial)
 Vue.use(VueResource)
 Vue.use(VueRouter)
+Vue.use(VueMaterial)
 
 new Vue({
     render: h => h(App),
